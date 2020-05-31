@@ -1,0 +1,20 @@
+@import "Fonts.scss";
+@import "Vars.scss";
+
+.ui.divided.selection.middle.aligned.list.cartList .item {
+	display: flex !important;
+	flex-direction: row !important;
+	.content {
+		font-size: 20px;
+		line-height: 160%;
+	}
+	.content:nth-child(1) {
+		width: 5% !important;
+	}
+	.content:nth-child(2) {
+		width: 82% !important;
+	}
+	.content:nth-child(3) {
+		width: 13% !important;
+	}
+}

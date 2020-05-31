@@ -1,0 +1,61 @@
+@import "Vars.scss";
+
+.nav-wrapper {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	transition: 0.5s;
+	height: 150px;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	height: 150px;
+	width: 75%;
+	position: relative;
+}
+
+nav a {
+	color: $textColor;
+	border: 0;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 400;
+	position: relative;
+	display: flex;
+	align-items: center;
+	// text-align: center;
+	text-decoration: none;
+	// margin: 0 auto;
+	@media (max-width: 988px) {
+		font-size: 15px;
+	}
+}
+
+.ui.menu {
+	.item:nth-child(3):before {
+		display: none;
+	}
+}
+.ui.divided.selection.middle.aligned.list.popupList .item {
+	display: flex !important;
+	flex-direction: row !important;
+	.content {
+		font-size: 14px;
+		line-height: 160%;
+		display: flex;
+		align-items: center;
+	}
+	.content:nth-child(1) {
+		width: 20% !important;
+	}
+	.content:nth-child(2) {
+		width: 60% !important;
+	}
+	.content:nth-child(3) {
+		width: 20% !important;
+	}
+}

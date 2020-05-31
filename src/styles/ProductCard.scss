@@ -1,0 +1,31 @@
+@import "Fonts.scss";
+@import "Vars.scss";
+
+.ui.four.cards {
+	display: flex !important;
+	@media (max-width: 768px) {
+		padding: 0;
+		margin: 50px auto 0;
+		flex-direction: column !important;
+		align-items: center !important;
+	}
+	.ui.card {
+		@media (max-width: 768px) {
+			margin: 0.75em 0 0.75em 0 !important;
+			width: 80% !important;
+			@media (max-width: 425px) {
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+.ui.image {
+	border-top-left-radius: 0.28571429rem !important;
+	border-top-right-radius: 0.28571429rem !important;
+}
+
+.info.icon {
+	float: right;
+	cursor: pointer;
+}

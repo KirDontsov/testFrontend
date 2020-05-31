@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC } from "react";
+import { Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Nav from "./components/Nav";
 
-export default App;
+import { routes } from "./routes";
+
+import "./styles/App.scss";
+
+export const App: FC = () => {
+	const renderSwitch = () => (
+		<Switch>
+			{routes.map(route => {
+				const component = route.component;
+				return <Route key={route.id} exact={route.isExact} path={route.path} component={component} status={route.status} />;
+			})}
+		</Switch>
+	);
+
+	return (
+		<div className="wrapper">
+			<Nav />
+			{renderSwitch()}
+		</div>
+	);
+};
